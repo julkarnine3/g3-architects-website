@@ -36,10 +36,12 @@
     font-size: 1.25rem;
     border-radius: 8px;
     border: none;
+    transition-duration: 0.4s;
 }
 .primary-btn:hover{
-    background-color: rgb(70, 11, 199);
+    background-color: rgb(70, 11, 199); /* Hover background color */
     cursor: pointer;
+    
 }
 main{
     max-width: 1440px;
@@ -47,6 +49,13 @@ main{
 }
 main > section{
     margin-top: 130px;
+}
+.section-title{
+    opacity: 100%;
+    font-size: 3.7rem;
+    font-weight: bold;
+    color: rgba(19, 19, 19, 1);
+    margin-bottom: 15px;
 }
 
 /* Header Style */
@@ -129,6 +138,44 @@ main > section{
     color: rgba(255, 144, 14, 1);
     font-weight: 700;
 }
+/* Styles for facts section */
+.facts-description{
+    font-size: 1rem;
+    max-width: 540px;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+}
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 50px;
+   
+}
+
+.fact-card{
+    border: 2px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fact-number{
+    color: rgba(66, 66, 66, 1);
+    font-size:  2.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgba(114, 114, 114, 1);
+    margin-top: 5px;
+}
+
 /* Media query for Small device */
 @media screen and (max-width:576px){
     .navbar,
@@ -155,9 +202,10 @@ main > section{
     }
     .team-img-container{
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
     .team-feature{
+        text-align: center;
         margin: 10px auto;
     }
 }
